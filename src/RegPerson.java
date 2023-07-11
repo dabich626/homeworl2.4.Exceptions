@@ -7,7 +7,6 @@ public class RegPerson {
     private String confirmPassword;
 
 
-
     public RegPerson(String login, String password, String confirmPassword) {
         this.login = login;
         this.password = password;
@@ -15,7 +14,6 @@ public class RegPerson {
 
 
     }
-
 
 
     public String getLogin() {
