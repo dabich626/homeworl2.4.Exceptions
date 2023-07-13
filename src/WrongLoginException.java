@@ -1,11 +1,11 @@
 import javax.security.auth.login.LoginException;
 
-public class WrongLoginException extends ExceptionService {
+public class WrongLoginException extends Exception {
 
-    public WrongLoginException(String login, String password, String confirmPassword) {
-        super(login, password, confirmPassword);
+    public throws WrongLoginException(String login, String password, String confirmPassword, String message) {
+        super(message);
 
-        throw new WrongLoginException(login.length() > 20 && login.contains("йцукенгшщзхъфывапролджэячсмитьбю=+ё~`,.<>?/\|';:"));
+        throw new WrongLoginException(login.length() > 20 || !login.contains(REGEX));
         try {
             return regPerson.ExceptionService(login, password, confirmPassword);
         } catch (WrongLoginException) {
