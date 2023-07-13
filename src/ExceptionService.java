@@ -1,17 +1,17 @@
-public class ExceptionService (String login, String password, String confirmPassword) {
+public class ExceptionService {
 
     private static final String REGEX = "йцукенгшщзхъфывапролджэячсмитьбю=+ё~`,.<>?/-|';:";
 
-    public static void checkLogin(String login){
+    public static void checkLogin(String login) {
 
-        if (login.length() > 20 && login.contains(REGEX)){
+        if (login.length() > 20 && login.contains(REGEX)) {
             throw new WrongLoginException("Логин должен быть меньше 20 символов и содержать только латинские буквы, цифры и знак подчеркивания ")
         }
     }
 
-    public static void checkPass(String password){
+    public static void checkPass(String password) {
 
-        if(password.length() > 20 && password.contains(REGEX)) {
+        if (password.length() > 20 && password.contains(REGEX)) {
 
             throw new WrongPasswordException("пароль содержит недопустимые символы и превышает 20 символов");
         }
@@ -19,21 +19,21 @@ public class ExceptionService (String login, String password, String confirmPass
 
     }
 
-    public static void checkPassMatch (String password, String confirmPassword){
+    public static void checkPassMatch(String password, String confirmPassword) {
 
-        if (password != confirmPassword){
+        if (password != confirmPassword) {
 
-            throw new ConfirmPasswordException ("пароли не совпадают");
+            throw new ConfirmPasswordException("пароли не совпадают");
         }
     }
 
-    public static void checkAuthentication(){
+    public static void checkAuthentication() {
 
-        checkLogin(person.getLogin());
+        checkLogin(regPerson.getLogin());
 
-        checkPass(person.getPassword());
+        checkPass(regPerson.getPassword());
 
-        checkPassMatch(person.getPassword(), person.getConfirmPassword());
+        checkPassMatch(regPerson.getPassword(), regPerson.getConfirmPassword());
 
     }
 }
