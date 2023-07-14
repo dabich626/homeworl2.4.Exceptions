@@ -27,7 +27,7 @@ public class ExceptionService {
         }
     }
 
-    public static void checkAuthentication() {
+    public static void checkAuthentication(RegPerson regPerson) {
 
         checkLogin(regPerson.getLogin());
 

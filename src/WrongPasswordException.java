@@ -1,8 +1,6 @@
 public class WrongPasswordException extends Exception {
 
-    public throws
-
-    WrongPasswordException(String message) {
+    public WrongPasswordException(String message) {
         super(message);
 
     }

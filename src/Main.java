@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            ExceptionService.checkAuthentication();
+            RegPerson regPerson = new RegPerson("skyProHomework", "blaBlaBla", "blaBlaBla");
+            ExceptionService.checkAuthentication(regPerson);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }

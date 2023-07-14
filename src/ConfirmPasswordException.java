@@ -1,8 +1,6 @@
 public class ConfirmPasswordException extends Exception {
 
-    public throws
-
-    ConfirmPasswordException(String message) {
+    public ConfirmPasswordException(String message) {
         super(message);
 
 
